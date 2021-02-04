@@ -1,4 +1,4 @@
-<header-component></header-component>
+@extends('layouts.app')
 
 @section('content')
 <div class="container">
