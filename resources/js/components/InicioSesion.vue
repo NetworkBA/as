@@ -1,70 +1,59 @@
 <template>
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
-
-                <div class="card-body">
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" required autocomplete="email" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" >
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" >
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                </div>
+  <div class="container justify-content-center">
+    <div class="row">
+      <div style="background-color: #76cee6" class="col">
+        <span class="align-middle mx-auto text-white align-self-center"
+          >Bienvenido</span
+        >
+      </div>
+      <!-- test -->
+      <div class="col">
+        <div class="container">
+          <div class="row justify-content-center">Inicio Sesion</div>
+          <div class="row">
+            <div class="col">
+              <div class="row justify-content-center">
+                <a href="login/facebook"><ion-icon name="logo-facebook"> </ion-icon></a>
+                <a href="login/google"> <ion-icon name="logo-google"></ion-icon></a>
+              </div>
+              <div class="row justify-content-center">ó usa tu cuenta</div>
             </div>
+          </div>
+          <div class="form-group">
+            <label for="Usuario">Usuario</label>
+            <input class="form-control" id="Usuario" name="username" required/>
+          </div>
+          <div class="form-group">
+            <label for="pass">Contraseña</label>
+            <input type="password" class="form-control" id="pass" name="password" required/>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="row justify-content-center">Olvide mi contraseña</div>
+              <div class="row">
+                <button
+                  type="button"
+                  class="btn btn-primary mx-auto btn-lg"
+                  style="background-color: #76cee6"
+                >
+                  Registrarme
+                </button>
+              </div><br>
+              <div class="row">
+                <button
+                  type="submit"
+                  class="btn btn-success mx-auto btn-lg"
+                  style="background-color: #27cc9a"
+                >
+                  Iniciar sesión
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 </template>
 
 <script>
