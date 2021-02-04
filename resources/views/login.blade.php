@@ -26,12 +26,12 @@
                         @csrf
 			<loginv-component></loginv-component>
 
-						</form>
-							</div>
-					</div>
-					</div>
-					</div>
-					</div>
+								</form>
+						</div>
+						</div>
+						</div>
+						</div>
+						</div>
 		<footer-component></footer-component>
 	</div>
 	<script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
