@@ -6,7 +6,7 @@ use App\Http\Controllers\EspecialistasController;
 use App\Http\Controllers\PacientesController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\MiniExamenMentalController;
-use App\Http\Controllers\EntrevistaInicialController; 
+use App\Http\Controllers\EntrevistaInicialController;
 use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
@@ -22,9 +22,8 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
     return view('front.index');
 })->name('index');
-Route::get('/Login', function () {
-    return view('login');
-})->name('_login');
+
+
 Route::get('/Registro', function () {
     return view('Registro');
 });
@@ -87,13 +86,13 @@ Route::post('/contacto/store',[ContactosController::class,'store'])->name('conta
 
 //** RUTAS CON INICIO CON SESION REQUERIDO **/
 //Route::group(['middleware'=>['auth']], function () {
-    
+
     //rutas de contactos
     Route::get('/contacto/ver/{id}',[ContactosController::class,'show'])->name('especialista.ver');
     Route::get('/contacto/listar',[ContactosController::class,'index'])->name('contacto.listar');
     Route::get('/contacto/editar/{id}',[ContactosController::class,'edit'])->name('contacto.editar');
     Route::post('/contacto/actualizar',[ContactosController::class,'update'])->name('contacto.actualizar');
-    Route::delete('/contacto/eliminar/{id}',[ContactosController::class,'destroy'])->name('contacto.eliminar');    
+    Route::delete('/contacto/eliminar/{id}',[ContactosController::class,'destroy'])->name('contacto.eliminar');
     //rutas de manejo de usuarios
 
     //Especialistas
@@ -103,9 +102,9 @@ Route::post('/contacto/store',[ContactosController::class,'store'])->name('conta
     Route::get('/especialista/ver/{id}',[EspecialistasController::class,'show'])->name('especialista.ver');
     Route::get('/especialista/editar/{id}',[EspecialistasController::class,'edit'])->name('especialista.editar');
     Route::post('/especialista/actualizar',[EspecialistasController::class,'update'])->name('especialista.actualizar');
-    Route::delete('/especialista/eliminar/{id}',[EspecialistasController::class,'destroy'])->name('especialista.eliminar'); 
-    Route::get('/dashboardEspecialista',[EspecialistasController::class,'dashboardEspecialista'])->name('especialista.dashboard');   
-    
+    Route::delete('/especialista/eliminar/{id}',[EspecialistasController::class,'destroy'])->name('especialista.eliminar');
+    Route::get('/dashboardEspecialista',[EspecialistasController::class,'dashboardEspecialista'])->name('especialista.dashboard');
+
 
     //Pacientes
     Route::get('/paciente/crear',[PacientesController::class,'create'])->name('paciente.crear');
@@ -114,7 +113,7 @@ Route::post('/contacto/store',[ContactosController::class,'store'])->name('conta
     Route::get('/paciente/ver/{id}',[PacientesController::class,'show'])->name('paciente.ver');
     Route::get('/paciente/editar/{id}',[PacientesController::class,'edit'])->name('paciente.editar');
     Route::post('/paciente/actualizar/{id}',[PacientesController::class,'update'])->name('paciente.actualizar');
-    Route::delete('/paciente/eliminar/{id}',[PacientesController::class,'destroy'])->name('paciente.eliminar');    
+    Route::delete('/paciente/eliminar/{id}',[PacientesController::class,'destroy'])->name('paciente.eliminar');
     Route::get('/paciente/agendar',[PacientesController::class,'agendarCita'])->name('paciente.agendar');
 
 
@@ -122,7 +121,7 @@ Route::post('/contacto/store',[ContactosController::class,'store'])->name('conta
 
     Route::get('/miniExamen/listar',[MiniExamenMentalController::class,'index'])->name('miniExamen.listar');
 
-    //Entrevista inicial 
+    //Entrevista inicial
 
     Route::post('/entrevistaInicial/store',[EntrevistaInicialController::class,'store'])->name('entrevista.store');
 
