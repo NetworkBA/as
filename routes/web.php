@@ -22,8 +22,9 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
     return view('front.index');
 })->name('index');
-
-
+Route::get('/Login', function () {
+    return view('login');
+})->name('_login');
 Route::get('/Registro', function () {
     return view('Registro');
 });
