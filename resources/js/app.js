@@ -5,7 +5,7 @@
  */
 
 require('./bootstrap');
-//require('./bower_components');
+
 window.Vue = require('vue');
 
 /**
@@ -18,23 +18,8 @@ window.Vue = require('vue');
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-Vue.component('header-component', require('./components/Header.vue').default);
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('footer-component', require('./components/Footer.vue').default);
-Vue.component('loginv-component', require('./components/InicioSesion.vue').default);
-Vue.component('registro-component', require('./components/Registro.vue').default);
-Vue.component('formulario-component', require('./components/Formulario.vue').default);
-Vue.component('contacto-component', require('./components/Contacto.vue').default);
-Vue.component('programainv-component', require('./components/ProgramaIntervencion.vue').default);
-Vue.component('sesiograma-component', require('./components/Sesiograma.vue').default);
-Vue.component('miniexamen-component', require('./components/MiniExamen.vue').default);
-Vue.component('entrevistaini-component', require('./components/Entrevistainicial.vue').default);
-Vue.component('admin-component', require('./components/administrador.vue').default);
-Vue.component('medicos-component', require('./components/Medicos.vue').default);
-Vue.component('addMedico-component', require('./components/AddMedico.vue').default);
-Vue.component('pacientes-component', require('./components/Pacientes.vue').default);
-Vue.component('addpaciente-component', require('./components/AddPaciente.vue').default);
 
+Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

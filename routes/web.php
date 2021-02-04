@@ -127,3 +127,7 @@ Route::post('/contacto/store',[ContactosController::class,'store'])->name('conta
     Route::post('/entrevistaInicial/store',[EntrevistaInicialController::class,'store'])->name('entrevista.store');
 
 //});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
