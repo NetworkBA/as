@@ -23,7 +23,7 @@ Route::get('/', function () {
     return view('front.index');
 })->name('index');
 Route::get('/Login', function () {
-    return view('login');
+    return view('auth/password/login');
 })->name('_login');
 Route::get('/Registro', function () {
     return view('Registro');
