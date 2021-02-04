@@ -15,10 +15,23 @@
 <body>
 	<div id="app" class="content">
 		<header-component></header-component>
-		<form method="POST" action="{{ route('login') }}">
-            @csrf
+		<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Login') }}</div>
+
+                <div class="card-body">
+                    <form method="POST" action="{{ route('login') }}">
+                        @csrf
 			<loginv-component></loginv-component>
-		</form>		
+
+						</form>
+							</div>
+					</div>
+					</div>
+					</div>
+					</div>
 		<footer-component></footer-component>
 	</div>
 	<script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
