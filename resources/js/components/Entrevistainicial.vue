@@ -1603,7 +1603,7 @@
 
 
 <script>
-mport Datepicker from 'vuejs-datepicker';
+import Datepicker from 'vuejs-datepicker';
 
 export default {
   components: {
@@ -1614,7 +1614,7 @@ export default {
       mostrar: 1,
       tope: 10,
       buttontext: "Siguiente",
-      typeBtn: "button", 
+      typeBtn: "button",
     };
   },
   methods: {
