@@ -1,13 +1,15 @@
 <template>
-<div class="form-group row">
+<div class="card-body">
+
+                        <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">Nombre</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email"  required autocomplete="email" autofocus>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong></strong>
+                                        <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
@@ -21,7 +23,7 @@
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <strong></strong>
                                     </span>
                                 @enderror
                             </div>
@@ -33,7 +35,7 @@
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" >
 
                                     <label class="form-check-label" for="remember">
-                                    Recordad Contraseña
+                                        Recordarme
                                     </label>
                                 </div>
                             </div>
@@ -46,12 +48,13 @@
                                 </button>
 
                                 @if (Route::has('password.request'))
-                                    <a class="btn btn-link" >
+                                    <a class="btn btn-link" href="{{ route('password.request') }}">
                                         Recuperar Contraseña
                                     </a>
                                 @endif
                             </div>
                         </div>
+                </div>
 </template>
 
 <script>
