@@ -71,6 +71,8 @@
     															<button type="submit" class="btn btn-primary">
     																	{{ __('Inicio de Sesión') }}
     															</button>
+																	<hr><a class="btn btn-primary btn-block text-white btn-google btn-user" role="button"><i class="fab fa-google"></i>&nbsp; Login with Google</a><a class="btn btn-primary btn-block text-white btn-facebook btn-user" role="button"><i class="fab fa-facebook-f"></i>&nbsp; Login with Facebook</a>
+                                        <hr>
 
     															@if (Route::has('password.request'))
     																	<a class="btn btn-link" href="{{ route('password.request') }}">
