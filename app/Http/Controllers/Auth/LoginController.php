@@ -42,10 +42,6 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-     public function redirectToProvider($driver)
-     {
-       return
-     }
 
       public function redirectToGoogle()
     {
