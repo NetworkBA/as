@@ -17,12 +17,13 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('apellido')->nullable();
+            $table->string('provider_id')->nullable();
             $table->string('nacionalidad')->nullable();
-            $table->char('sexo', 1)->nullable();  
-            $table->string('telefono')->nullable();  
-            $table->string('fecha_nacimiento')->nullable();        
+            $table->char('sexo', 1)->nullable();
+            $table->string('telefono')->nullable();
+            $table->string('fecha_nacimiento')->nullable();
             $table->string('email')->unique();
-            $table->foreignId('id_tipo')->default(3);   
+            $table->foreignId('id_tipo')->default(3);
             $table->foreign('id_tipo')->references('id')->on('tipo_usuarios');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password')->nullable();
@@ -30,7 +31,7 @@ class CreateUsersTable extends Migration
             $table->foreignId('current_team_id')->nullable();
             $table->text('profile_photo_path')->nullable();
             $table->string('especialidad')->nullable();
-            $table->foreignId('id_motivo')->nullable();   
+            $table->foreignId('id_motivo')->nullable();
             $table->foreign('id_motivo')->references('id')->on('motivo_consultas');
             $table->timestamps();
         });
