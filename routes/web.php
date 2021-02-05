@@ -77,8 +77,14 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 //rutas para login con cuentas de facebook y google
-Route::get('login/{driver}', [LoginController::class, 'redirectToProvider']);
-Route::get('login/{driver}/callback', [LoginController::class, 'handleProviderCallback']);
+// Google login
+Route::get('login/google', [App\Http\Controllers\Auth\LoginController::class, 'redirectToGoogle'])->name('login.google');
+Route::get('login/google/callback', [App\Http\Controllers\Auth\LoginController::class, 'handleGoogleCallback']);
+
+// Facebook login
+Route::get('login/facebook', [App\Http\Controllers\Auth\LoginController::class, 'redirectToFacebook'])->name('login.facebook');
+Route::get('login/facebook/callback', [App\Http\Controllers\Auth\LoginController::class, 'handleFacebookCallback']);
+
 Route::get('logout',[LoginController::class ,'logout'])->name('logout');
 
 //rutas de contactos
