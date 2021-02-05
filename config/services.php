@@ -34,13 +34,13 @@ return [
     'google' => [
         'client_id' => env('GOOGLE_CLIENT_ID'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-        'redirect' => 'http://206.189.164.54/public/login/google/callback',
+        'redirect' => 'https://www.mentecuatropuntocero.com/public/login/google/callback',
     ],
 
     'facebook' => [
         'client_id' => env('FACEBOOK_CLIENT_ID'),
         'client_secret' => env('FACEBOOK_CLIENT_SECRET'),
-        'redirect' => 'http://206.189.164.54/public/login/facebook/callback',
+        'redirect' => 'https://www.mentecuatropuntocero.com/public/login/facebook/callback',
     ],
 
 ];
