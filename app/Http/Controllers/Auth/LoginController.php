@@ -42,7 +42,7 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-     
+
 
       public function redirectToGoogle()
     {
@@ -85,7 +85,7 @@ class LoginController extends Controller
             $user->name = $data->name;
             $user->email = $data->email;
             $user->provider_id = $data->id;
-            $user->avatar = $data->avatar;
+            //avatar ->//$user->avatar = $data->avatar;
             $user->save();
         }
 
