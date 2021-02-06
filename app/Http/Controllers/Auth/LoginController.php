@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
@@ -50,7 +51,7 @@ class LoginController extends Controller
     }
 
     // Google callback
-    public function handleGoogleCallback()
+    public function handleGoogleCallback(Request $request)
     {
         $user = Socialite::driver('google')->user();
 
@@ -67,7 +68,7 @@ class LoginController extends Controller
     }
 
     // Facebook callback
-    public function handleFacebookCallback()
+    public function handleFacebookCallback(Request $request)
     {
         $user = Socialite::driver('facebook')->user();
 
